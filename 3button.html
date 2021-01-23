@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      li {
+        width: 100px;
+        height: 30px;
+        display: inline-block;
+        border: 2px solid black;
+      }
+
+      img {
+        height: 100%;
+        object-fit: contain;
+      }
+      div {
+        width: 500px;
+        height: 500px;
+        border: 2px solid black;
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <button href="" class="buttonA">
+      <li>
+        <img src="/imge/home.svg" alt="" class="picA" />
+      </li>
+    </button>
+    <button href="" class="buttonB">
+      <li>
+        <img src="/imge/monitor.svg" alt="" class="picB" />
+      </li>
+    </button>
+    <button href="" class="buttonC">
+      <li>
+        <img src="/imge/shopping-cart.svg" alt="" class="picC" />
+      </li>
+    </button>
+
+    <div class="pageA">pageA</div>
+    <div class="pageB">pageB</div>
+    <div class="pageC">pageC</div>
+  </body>
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"
+  ></script>
+  <script>
+    $(".buttonA").click(() => {
+      $(".pageA").css("display", "block");
+      $(".pageB").css("display", "none");
+      $(".pageC").css("display", "none");
+      $(".picA").attr("src", "/imge/home_1.svg");
+      $(".picB").attr("src", "/imge/monitor.svg");
+      $(".picC").attr("src", "/imge/shopping-cart.svg");
+    });
+    $(".buttonB").click(() => {
+      $(".pageA").css("display", "none");
+      $(".pageB").css("display", "block");
+      $(".pageC").css("display", "none");
+      $(".picB").attr("src", "/imge/monitor_1.svg");
+      $(".picA").attr("src", "/imge/home.svg");
+      $(".picC").attr("src", "/imge/shopping-cart.svg");
+    });
+    $(".buttonC").click(() => {
+      $(".pageA").css("display", "none");
+      $(".pageB").css("display", "none");
+      $(".pageC").css("display", "block");
+      $(".picC").attr("src", "/imge/shopping-cart_1.svg");
+      $(".picA").attr("src", "/imge/home.svg");
+      $(".picB").attr("src", "/imge/monitor.svg");
+    });
+  </script>
+</html>
